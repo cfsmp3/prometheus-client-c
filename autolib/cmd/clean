@@ -51,8 +51,8 @@ run(){
         dpkg --remove "$pkg"
       fi
     done
-    rm -rf prom/build/*
-    rm -rf promhttp/build/*
+    rm -rf prom/build/* prom/*.so prom/*.cmake prom/CMakeCache.txt prom/CMakeFiles prom/Makefile
+    rm -rf promhttp/build/* promhttp/*.so promhttp/*.cmake promhttp/CMakeCache.txt promhttp/CMakeFiles promhttp/Makefile
   popd > /dev/null || return $?
 }
 
